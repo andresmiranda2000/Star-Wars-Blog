@@ -22,6 +22,7 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
+			state.actions.peopleData()
 			state.actions.planetsData()
 			state.actions.starshipsData()
 		}, []);

@@ -8,11 +8,18 @@ import Starships from "./starships.jsx";
 export const Home = () => {
   const { store } = useContext(Context);
 
+  const cardStyle = { width: '18rem' };
   return (
     <div className="container">
       <>
-
-       // aquí iría lo de Personajes pero lo sigo trabajando, por tiempos lo subo así, hasta ver el error. 
+        <h2 className="text-left mt-3 mb-4">Personajes</h2>
+        <div className="d-flex flex-nowrap" style={{ overflowX: 'auto' }}>
+          {store.peopleInfo && store.peopleInfo.map((item) => 
+            <div key={item.url} style={cardStyle}>
+              <People uid={item.uid} name={item.name} />
+            </div>
+          )}
+        </div>
 
         <h2 className="text-left mt-3 mb-4">Planetas</h2>
         <div className="planets" style={{ width: '100%', overflowX: 'auto' }}>
