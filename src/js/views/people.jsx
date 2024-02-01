@@ -14,7 +14,7 @@ export const Planets = (props) => {
             .then((data) => setPeopleData(data.result.properties));
     }, []);
 
-    var imageURL = "https://starwars-visualguide.com/assets/img/people/" + props.uid + ".jpg";
+    var imageURL = "https://starwars-visualguide.com/assets/img/characters/" + props.uid + ".jpg";
 
     return (
         <div className="card mx-1" key={props.url} style={{ overflow: 'hidden' }}>

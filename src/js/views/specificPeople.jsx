@@ -13,7 +13,7 @@ const SpecificPeople = () => {
             .then((data) => setMyPeople(data.result.properties));
     }, []);
 
-    const imageURL = `https://starwars-visualguide.com/assets/img/people/${params.uid}.jpg`;
+    const imageURL = `https://starwars-visualguide.com/assets/img/characters/${params.uid}.jpg`;
 
     return (
         <div className="container my-4">
